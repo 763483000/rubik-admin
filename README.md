@@ -13,10 +13,10 @@ Admin template based on Vue + Element.（基于Vue + Element的后台管理模�
 
 ## Introduction
 
-[rubik-admin](https://github.com/fangxinqu/rubik-admin)是一套基于[Vue](https://github.com/vuejs/vue)和[Element](https://github.com/ElemeFE/element)的后台管理模版。它提供「ES5 无需编译」和「ES6+ 需编译」2种技术解决方向，主要为了协助各类开发人群提高页面的开发效率。其中：
+[rubik-admin](https://github.com/fangxinqu/rubik-admin) 是一套基于 [Vue](https://github.com/vuejs/vue) 和[Element](https://github.com/ElemeFE/element) 的后台管理模版。它提供「ES5 无需编译」和「ES6+ 需编译」2种技术解决方向，主要为了协助各类开发人群提高页面的开发效率。其中：
 
-* ES5 - 通过[RequreJS](https://github.com/requirejs/requirejs)实现模块化加载文件，直接运行于浏览器中。
-* ES6+ - 基于[vue-cli](https://github.com/vuejs/vue-cli)脚手架构建管理，更加愉快的体验ES6+新特性。
+* ES5 - 通过 [RequreJS](https://github.com/requirejs/requirejs) 实现模块化加载文件，直接运行于浏览器中。
+* ES6+ - 基于 [vue-cli](https://github.com/vuejs/vue-cli) 脚手架构建管理，更加愉快的体验ES6+新特性。
 
 
 ## Links
