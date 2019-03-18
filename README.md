@@ -24,8 +24,9 @@ Admin template based on Vue + Element.（基于Vue + Element的后台管理模�
 - GitHub - [https://github.com/fangxinqu/rubik-admin](https://github.com/fangxinqu/rubik-admin)
 - 在线演示 - 努力中...
 - 使用文档 - 努力中...
+- 计划安排 - [https://github.com/fangxinqu/rubik-admin/blob/master/PLANSCHEDULE.md](https://github.com/fangxinqu/rubik-admin/blob/master/PLANSCHEDULE.md)
+- 更新日志 - [https://github.com/fangxinqu/rubik-admin/blob/master/CHANGELOG.md](https://github.com/fangxinqu/rubik-admin/blob/master/CHANGELOG.md)
 - 常见问题 - 努力中...
-- 更新日志 - [https://github.com/fangxinqu/rubik-admin/releases](https://github.com/fangxinqu/rubik-admin/releases)
 
 ## Browsers support
 
