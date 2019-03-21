@@ -1,0 +1,237 @@
+.ra-aside {
+  position: absolute;
+  top: $header--height;
+  bottom: 0;
+  left: 0;
+  z-index: $aside--zindex;
+  width: $aside--width;
+  box-shadow: 1px 0 0 0 rgba(0, 0, 0, .05);
+  background-color: $color--white;
+  overflow: hidden;
+  transition: right .3s, width .3s;
+  &__inner {
+    position: relative;
+    z-index: 1;
+    width: $aside--width + 20px;
+    height: 100%;
+    padding-bottom: 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    transition: width .3s;
+  }
+  &__menu.el-menu {
+    width: $aside--width;
+    border-right: 0;
+    transition: width .3s;
+  }
+  &__menu.el-menu .el-submenu {
+    position: relative;
+  }
+  &__menu.el-menu .el-menu-item,
+  &__menu.el-menu .el-submenu .el-submenu__title {
+    height: $aside--menu-item-height;
+    line-height: $aside--menu-item-height;
+    color: $color--text-regular;
+    background-color: transparent;
+    &:hover {
+      color: $color--primary;
+    }
+  }
+  &__menu.el-menu .el-menu-item.is-active,
+  &__menu.el-menu .el-submenu.is-active,
+  &__menu.el-menu .el-submenu.is-active .el-menu,
+  &__menu.el-menu .el-submenu.is-opened,
+  &__menu.el-menu .el-submenu.is-opened .el-menu {
+    background-color: $color--primary-light-9;
+  }
+  &__menu.el-menu .el-menu-item.is-active,
+  &__menu.el-menu .el-submenu.is-active > .el-submenu__title,
+  &__menu.el-menu > .el-submenu.is-opened > .el-submenu__title {
+    color: $color--primary;
+  }
+  &__menu.el-menu .el-menu-item i,
+  &__menu.el-menu .el-submenu .el-submenu__title i {
+    color: inherit;
+  }
+  &__menu.el-menu .el-submenu .el-menu--vertical {
+    position: fixed !important;
+  }
+  &__menu.el-menu .el-submenu__icon-arrow {
+    margin-top: -6px;
+  }
+  &__menu-icon {
+    display: inline-block;
+    vertical-align: middle !important;
+    width: 16px;
+    margin-right: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: inherit;
+    transition: font-size .3s;
+  }
+}
+
+// 黑色
+.ra-aside--dark,
+.ra-aside--dark.ra-aside--top {
+  .ra-aside {
+    box-shadow: none;
+  }
+  .ra-aside,
+  .ra-aside__menu.el-menu,
+  .ra-aside__menu.el-menu .el-menu {
+    background-color: $aside--background-color-dark;
+  }
+  .ra-aside__menu.el-menu .el-menu-item,
+  .ra-aside__menu.el-menu .el-submenu .el-submenu__title {
+    color: $aside--text-color-dark;
+    &:hover {
+      color: $color--white;
+    }
+  }
+  .ra-aside__menu.el-menu .el-menu-item.is-active,
+  .ra-aside__menu.el-menu .el-submenu.is-active,
+  .ra-aside__menu.el-menu .el-submenu.is-active .el-menu,
+  .ra-aside__menu.el-menu .el-submenu.is-opened,
+  .ra-aside__menu.el-menu .el-submenu.is-opened .el-menu {
+    background-color: mix($color--white, $aside--background-color-dark, 5%);
+  }
+  .ra-aside__menu.el-menu .el-menu-item.is-active,
+  .ra-aside__menu.el-menu .el-submenu.is-active > .el-submenu__title,
+  .ra-aside__menu.el-menu > .el-submenu.is-opened > .el-submenu__title {
+    color: $color--white;
+  }
+}
+
+// 固定
+.ra-aside--fixed {
+  .ra-header__hd,
+  .ra-aside {
+    position: fixed;
+  }
+}
+
+// 折叠
+.ra-aside--fold {
+  .ra-header {
+    padding-left: $aside--width-fold;
+  }
+  .ra-header__hd,
+  .ra-header .ra-brand {
+    width: $aside--width-fold;
+  }
+  .ra-header .ra-brand--lg {
+    display: none;
+  }
+  .ra-header .ra-brand--sm {
+    display: flex;
+  }
+  .ra-header__icon-menu--rz180 {
+    transform: rotateZ(180deg);
+  }
+  .ra-aside,
+  .ra-aside__menu.el-menu {
+    width: $aside--width-fold;
+  }
+  .ra-aside__inner {
+    width: $aside--width-fold + 20px;
+  }
+  .ra-aside__menu.el-menu > .el-menu-item > .ra-aside__menu-icon,
+  .ra-aside__menu.el-menu > .el-menu-item > .el-tooltip > .ra-aside__menu-icon,
+  .ra-aside__menu.el-menu > .el-submenu > .el-submenu__title > .ra-aside__menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: 0;
+    font-size: 18px;
+    transform: translate(-50%, -50%);
+  }
+  .ra-main {
+    margin-left: $aside--width-fold;
+  }
+  .ra-footer {
+    margin-left: $aside--width-fold;
+  }
+}
+
+// 头部
+.ra-aside--top {
+  &.ra-wrapper {
+    padding-top: $header--height + $aside--top-height;
+  }
+  .ra-header {
+    padding-left: 0;
+  }
+  .ra-header__hd {
+    position: relative;
+    width: auto;
+    padding: 0 15px;
+  }
+  .ra-brand {
+    width: auto;
+  }
+  .ra-aside {
+    right: 0;
+    bottom: auto;
+    width: auto;
+    height: $aside--top-height;
+    padding: 0 15px;
+    overflow: initial;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, .05);
+  }
+  .ra-aside__inner {
+    width: auto;
+    padding-bottom: 0;
+    overflow: initial;
+  }
+  .ra-aside__menu.el-menu {
+    width: auto;
+    border-bottom: 0 !important;;
+  }
+  .ra-aside__menu.el-menu .el-menu-item,
+  .ra-aside__menu.el-menu .el-submenu .el-submenu__title {
+    height: $aside--top-height;
+    padding: 0 15px;
+    line-height: $aside--top-height;
+    border-bottom: 0 !important;
+  }
+  .ra-aside__menu.el-menu .el-menu-item.is-active,
+  .ra-aside__menu.el-menu .el-submenu.is-active,
+  .ra-aside__menu.el-menu .el-submenu.is-active .el-menu,
+  .ra-aside__menu.el-menu .el-submenu.is-opened,
+  .ra-aside__menu.el-menu .el-submenu.is-opened .el-menu {
+    background-color: $color--white;
+  }
+  .ra-aside__menu.el-menu .el-submenu > .el-menu--horizontal {
+    position: absolute !important;
+  }
+  .ra-aside__menu.el-menu > .el-submenu > .el-menu--horizontal {
+    left: 0 !important;
+  }
+  .ra-aside__menu.el-menu > .el-submenu > .el-menu--horizontal,
+  .ra-aside__menu.el-menu > .el-submenu > .el-menu--horizontal > .el-menu,
+  .ra-aside__menu.el-menu > .el-submenu > .el-menu--horizontal > .el-menu > .el-menu-item {
+    min-width: 100%;
+  }
+  .ra-aside__menu.el-menu .el-submenu__icon-arrow {
+    margin-top: 0;
+  }
+  .ra-main {
+    margin-left: 0;
+  }
+  .ra-main__hd {
+    padding: 20px 15px 5px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+.ra-aside--top.ra-header--white {
+  .ra-header__hd {
+    background-color: $color--white;
+  }
+  .ra-brand {
+    color: $color--primary;
+  }
+}
