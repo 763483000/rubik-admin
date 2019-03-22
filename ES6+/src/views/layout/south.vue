@@ -1,6 +1,6 @@
 <template>
   <footer class="ra-south">
-    <p>footer</p>
+    <p>Rubik Admin</p>
   </footer>
 </template>
 

@@ -5,11 +5,9 @@
 }
 
 body {
-  margin: 0;
   font-family: $font--family-base;
   font-size: $font--size-base;
   line-height: $font--line-height-base;
-  text-align: left;
   color: $color--text-primary;
   background-color: $color--white;
 }
@@ -19,7 +17,6 @@ a {
   text-decoration: none;
   &:hover {
     color: $link--hover-color;
-    text-decoration: none;
   }
 }
 

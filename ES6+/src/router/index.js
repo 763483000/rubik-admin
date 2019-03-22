@@ -6,16 +6,10 @@ Vue.use(Router);
 // 页面路由
 export const pageRoutes = [
   {
-    path: '/404',
-    component: () => import('@/views/pages/404.vue'),
-    name: '404',
-    meta: { title: '404未找到' },
+    path: '/404', component: () => import('@/views/pages/404.vue'), name: '404', meta: { title: '404未找到' },
   },
   {
-    path: '/login',
-    component: () => import('@/views/pages/login.vue'),
-    name: 'login',
-    meta: { title: '登录' },
+    path: '/login', component: () => import('@/views/pages/login.vue'), name: 'login', meta: { title: '登录' },
   },
 ];
 
@@ -28,10 +22,7 @@ export const moduleRoutes = {
   meta: { title: '布局' },
   children: [
     {
-      path: '/home',
-      component: () => import('@/views/modules/home.vue'),
-      name: 'home',
-      meta: { title: '首页', isTab: true },
+      path: '/home', component: () => import('@/views/modules/home.vue'), name: 'home', meta: { title: '首页', isTab: true },
     },
   ],
 };

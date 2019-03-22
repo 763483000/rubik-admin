@@ -7,9 +7,9 @@
     flex-flow: column wrap;
     min-height: 100%;
     padding: 15px 10px;
-    border: 1px solid $bg--color-base;
+    border: 1px solid $background--color-base;
     color: $color--text-primary;
-    background-color: $bg--color-base;
+    background-color: $background--color-base;
     transition: border-color .3s, background-color .3s;
     &:hover {
       border-color: $color--primary;
@@ -168,8 +168,8 @@
   }
   .index-consume__block {
     &:hover {
-      border-color: $bg--color-base;
-      background-color: $bg--color-base;
+      border-color: $background--color-base;
+      background-color: $background--color-base;
     }
   }
   .index-consume__block .index-block__bd {
@@ -185,7 +185,7 @@
     margin: 10px -10px -10px;
     line-height: 38px;
     text-align: center;
-    background-color: mix($color--black, $bg--color-base, 5%);
+    background-color: mix($color--black, $background--color-base, 5%);
     @extend .t-truncate;
   }
   .index-consume__block .index-block__ft > .el-button {
@@ -214,7 +214,7 @@
     position: relative;
     padding: 15px 15px 15px 75px;
     line-height: 1.5;
-    background-color: $bg--color-base;
+    background-color: $background--color-base;
   }
   .index-ambassador__item-icon {
     position: absolute;
@@ -249,7 +249,7 @@
     position: relative;
     width: 60px;
     color: $color--text-placeholder;
-    background-color: $bg--color-base;
+    background-color: $background--color-base;
   }
   .index-assistant__item-hd .icon-svg {
     position: absolute;
@@ -276,7 +276,7 @@
     margin: -15px -15px 15px;
     line-height: 46px;
     color: $color--text-regular;
-    background-color: $bg--color-base;
+    background-color: $background--color-base;
   }
   .index-information__list {
     padding: 0;

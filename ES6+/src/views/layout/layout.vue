@@ -1,13 +1,28 @@
 <template>
   <div
+    ref="raWrapper"
     v-loading.fullscreen.lock="loading"
-    element-loading-text="拼命加载中"
-    class="ra-layout">
+    element-loading-text="加载中..."
+    class="ra-layout"
+    :class="[
+      'ra-north--' + $store.state.headerSkin,
+      'ra-west--' + $store.state.asideSkin,
+      {
+        'ra-layout--center': $store.state.wrapperCenter,
+        'ra-north--fixed': $store.state.headerFixed,
+        'ra-west--fixed': $store.state.asideFixed,
+        'ra-west--fold': $store.state.asideFold,
+        'ra-west--top': $store.state.asideTop,
+        'ra-east--fixed': $store.state.controlFixed,
+        'ra-east--open': $store.state.controlOpen,
+        'ra-main-tabs__header--fixed': $store.state.mainTabsHeaderFixed
+      }
+    ]">
     <template v-if="!loading">
       <north />
       <west />
-      <east />
       <center />
+      <east />
       <south />
     </template>
   </div>
@@ -21,7 +36,6 @@ import East from './east.vue';
 import South from './south.vue';
 
 export default {
-  name: 'main',
   data() {
     return {
       loading: true,

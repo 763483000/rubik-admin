@@ -1,19 +1,24 @@
 @import "./variables.scss";
+
 // 全局
 @import "./global/normalize.scss";
 @import "./global/reset.scss";
 @import "./global/reset-element.scss";
 @import "./global/utilities.scss";
 @import "./global/component.scss";
+
 // 布局
 @import "./layout/layout.scss";
 @import "./layout/north.scss";
 @import "./layout/west.scss";
-@import "./layout/east.scss";
 @import "./layout/center.scss";
+@import "./layout/east.scss";
 @import "./layout/south.scss";
+
 // 页面
 @import "./pages/index.scss";
 @import "./pages/icon.scss";
 @import "./pages/login.scss";
 @import "./pages/chart.scss";
+
+// 模块

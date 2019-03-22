@@ -72,7 +72,7 @@ $border--radius-base: 4px;
 
 /* Background
 -------------------------- */
-$bg--color-base: #f5f7fa;
+$background--color-base: #f5f7fa;
 
 
 /* Font
@@ -90,14 +90,14 @@ $font--line-height-base: 1.15;
 
 /* Layout
 ------------------------------ */
-$layout-min-width: 1180px;
+$layout--min-width: 1180px;
 
 // North
 $north--zindex: 1040;
 $north--height: 50px;
 
 // West
-$west--zindex: 1020;
+$west--zindex: 1030;
 $west--width: 230px;
 $west--width-fold: 60px;
 $west--menu-item-height: 40px;
@@ -110,7 +110,7 @@ $east--zindex: 1020;
 $east--width: 210px;
 
 // center
-$center--zindex: 1010;
+$center--zindex: 1000;
 $center--background-color: #f1f4f5;
 $center--tabs-tool-width: 42px;
 $center--tabs-header-height: 38px;
