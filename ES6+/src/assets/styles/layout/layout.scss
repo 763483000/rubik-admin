@@ -1,18 +1,18 @@
-.ra-wrapper {
+.ra-layout {
   position: relative;
   min-height: 100vh;
-  padding-top: $header--height;
+  padding-top: $north--height;
   overflow: hidden;
 }
 
 // 居中
-.ra-wrapper--center {
-  width: $wrapper-min-width;
+.ra-layout--center {
+  width: $layout-min-width;
   margin: 0 auto;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
-@media (max-width: $wrapper-min-width + 20px) {
-  .ra-wrapper--center {
+@media (max-width: $layout-min-width + 20px) {
+  .ra-layout--center {
     width: auto;
     margin: 0 15px;
   }

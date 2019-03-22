@@ -1,11 +1,10 @@
 <template>
-  <footer class="ra-footer">
+  <footer class="ra-south">
     <p>footer</p>
   </footer>
 </template>
 
 <script>
 export default {
-  
-}
+};
 </script>

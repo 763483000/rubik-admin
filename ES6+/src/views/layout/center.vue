@@ -1,18 +1,18 @@
 <template>
-  <main class="ra-main">
+  <main class="ra-center">
     <!-- standard 标准 -->
-    <div v-show="$store.state.mainType === 'standard'" class="ra-main__hd">
+    <div v-show="$store.state.mainType === 'standard'" class="ra-center__hd">
       <el-breadcrumb separator="/">
         <el-breadcrumb-item>rubik-admin</el-breadcrumb-item>
         <el-breadcrumb-item>首页</el-breadcrumb-item>
       </el-breadcrumb>
     </div>
-    <div v-show="$store.state.mainType === 'standard'" class="ra-main__bd">
+    <div v-show="$store.state.mainType === 'standard'" class="ra-center__bd">
       <!-- <include src="./templates/pages/index.html"></include> -->
       <home></home>
     </div>
     <!-- tabs 标签页 -->
-    <el-dropdown v-show="$store.state.mainType === 'tabs'" class="ra-main-tabs__tool">
+    <el-dropdown v-show="$store.state.mainType === 'tabs'" class="ra-center-tabs__tool">
       <i class="el-icon-arrow-down"></i>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item>关闭当前标签页</el-dropdown-item>
@@ -20,8 +20,8 @@
         <el-dropdown-item>关闭全部标签页</el-dropdown-item>
       </el-dropdown-menu>
     </el-dropdown>
-    <el-tabs v-show="$store.state.mainType === 'tabs'" class="ra-main-tabs ra-tabs" v-model="$store.state.mainTabsActive">
-      <el-tab-pane label="home" name="home" :closable="false" class="ra-main-tabs__pane--full">
+    <el-tabs v-show="$store.state.mainType === 'tabs'" class="ra-center-tabs ra-tabs" v-model="$store.state.mainTabsActive">
+      <el-tab-pane label="home" name="home" :closable="false" class="ra-center-tabs__pane--full">
         <svg slot="label" class="ra-content--tabs-icon-nav icon-svg" aria-hidden="true"><use xlink:href="#icon-home"></use></svg>
         <!-- <include src="./templates/pages/index.html" path="."></include> -->
         <home></home>

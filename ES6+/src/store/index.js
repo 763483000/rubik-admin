@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import cloneDeep from 'lodash/cloneDeep'
-import user from './modules/user'
 
 Vue.use(Vuex)
 
@@ -64,14 +63,13 @@ export default new Vuex.Store({
     contentTabsActiveName: 'home'
   },
   modules: {
-    user
   },
   mutations: {
     // 重置vuex本地储存状态
-    resetStore (state) {
+    resetStore(state) {
       Object.keys(state).forEach((key) => {
-        state[key] = cloneDeep(window.APP_CONFIG['storeState'][key])
+        state[key] = cloneDeep(window.APP_CONFIG['storeState'][key]);
       })
     }
-  }
+  },
 })

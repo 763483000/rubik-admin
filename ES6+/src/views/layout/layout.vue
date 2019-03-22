@@ -1,7 +1,7 @@
 <template>
   <div
     ref="raWrapper"
-    class="ra-wrapper"
+    class="ra-layout"
     :class="[
       'ra-header--' + $store.state.headerSkin,
       'ra-aside--' + $store.state.asideSkin,
@@ -19,21 +19,21 @@
     v-loading.fullscreen.lock="loading"
     element-loading-text="拼命加载中">
     <template v-if="!loading">
-      <layout-north></layout-north>
-      <layout-west></layout-west>
-      <layout-east></layout-east>
-      <layout-center></layout-center>
-      <layout-south></layout-south>
+      <north />
+      <west />
+      <east />
+      <center />
+      <south />
     </template>
   </div>
 </template>
 
 <script>
-import LayoutNorth from './layout-north.vue'
-import LayoutWest from './layout-west.vue'
-import LayoutCenter from './layout-center.vue'
-import LayoutEast from './layout-east.vue'
-import LayoutSouth from './layout-south.vue'
+import North from './north.vue';
+import West from './west.vue';
+import Center from './center.vue';
+import East from './east.vue';
+import South from './south.vue';
 export default {
   name: 'main',
   data () {
@@ -42,14 +42,16 @@ export default {
     }
   },
   components: {
-    LayoutNorth,
-    LayoutWest,
-    LayoutCenter,
-    LayoutEast,
-    LayoutSouth
+    North,
+    West,
+    Center,
+    East,
+    South
   },
   created () {
-    this.loading = false
-  }
-}
+    window.setTimeout(() => {
+      this.loading = false
+    }, 300)
+  },
+};
 </script>

@@ -1,10 +1,10 @@
-.ra-control {
+.ra-east {
   position: absolute;
-  top: $header--height;
-  right: -$control--width;
+  top: $north--height;
+  right: -$east--width;
   bottom: 0;
-  z-index: $control--zindex;
-  width: $control--width;
+  z-index: $east--zindex;
+  width: $east--width;
   background-color: $color--white;
   transition: right .3s;
   &__toggle {
@@ -24,13 +24,13 @@
   &__inner {
     position: relative;
     z-index: 1;
-    width: $control--width + 20px;
+    width: $east--width + 20px;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
   }
   &__bd {
-    width: $control--width;
+    width: $east--width;
     padding: 5px 20px 20px;
   }
   .ra-tabs.el-tabs {
@@ -58,12 +58,12 @@
 }
 
 // 固定
-.ra-control--fixed {
-  .ra-control {
+.ra-east--fixed {
+  .ra-east {
     position: fixed;
   }
 }
-.ra-control--fixed.ra-control--open {
+.ra-east--fixed.ra-east--open {
   .ra-main {
     margin-right: 0;
   }
@@ -71,27 +71,27 @@
     margin-right: 0;
   }
 }
-.ra-control--fixed.ra-control--open.ra-aside--top {
+.ra-east--fixed.ra-east--open.ra-aside--top {
   .ra-aside {
     right: 0;
   }
 }
 
 // 打开
-.ra-control--open {
-  .ra-control {
+.ra-east--open {
+  .ra-east {
     right: 0;
     box-shadow: -1px 0 0 0 rgba(0, 0, 0, .05);
   }
   .ra-main {
-    margin-right: $control--width;
+    margin-right: $east--width;
   }
   .ra-footer {
-    margin-right: $control--width;
+    margin-right: $east--width;
   }
 }
-.ra-control--open.ra-aside--top {
+.ra-east--open.ra-aside--top {
   .ra-aside {
-    right: $control--width;
+    right: $east--width;
   }
 }

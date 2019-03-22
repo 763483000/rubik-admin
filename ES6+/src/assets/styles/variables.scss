@@ -88,47 +88,37 @@ $font--weight-base: 500;
 $font--line-height-base: 1.15;
 
 
-/* Wrapper
+/* Layout
 ------------------------------ */
-$wrapper-min-width: 1180px;
+$layout-min-width: 1180px;
 
+// North
+$north--zindex: 1040;
+$north--height: 50px;
 
-/* Header
------------------------------- */
-$header--zindex: 1030;
-$header--height: 50px;
+// West
+$west--zindex: 1020;
+$west--width: 230px;
+$west--width-fold: 60px;
+$west--menu-item-height: 40px;
+$west--text-color-dark: #8a979e;
+$west--background-color-dark: #263238;
+$west--top-height: 42px;
 
+// East
+$east--zindex: 1020;
+$east--width: 210px;
 
-/* Aside
------------------------------- */
-$aside--zindex: 1020;
-$aside--width: 230px;
-$aside--width-fold: 60px;
-$aside--menu-item-height: 40px;
-$aside--text-color-dark: #8a979e;
-$aside--background-color-dark: #263238;
-$aside--top-height: 42px;
+// center
+$center--zindex: 1010;
+$center--background-color: #f1f4f5;
+$center--tabs-tool-width: 42px;
+$center--tabs-header-height: 38px;
+$center--tabs-content-padding-x: 15px;
+$center--tabs-content-padding-y: 15px;
+$center--tabs-panel-padding-x: 15px;
+$center--tabs-panel-padding-y: 15px;
 
-
-/* Control
------------------------------- */
-$control--zindex: 1020;
-$control--width: 210px;
-
-
-/* Main
------------------------------- */
-$main--zindex: 1010;
-$main--background-color: #f1f4f5;
-$main--tabs-tool-width: 42px;
-$main--tabs-header-height: 38px;
-$main--tabs-content-padding-x: 15px;
-$main--tabs-content-padding-y: 15px;
-$main--tabs-panel-padding-x: 15px;
-$main--tabs-panel-padding-y: 15px;
-
-
-/* Footer
------------------------------- */
-$footer--zindex: 1010;
-$footer--height: 56px;
+// south
+$south--zindex: 1010;
+$south--height: 56px;

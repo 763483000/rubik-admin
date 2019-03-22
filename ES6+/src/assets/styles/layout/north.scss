@@ -1,20 +1,20 @@
-.ra-header {
+.ra-north {
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
-  z-index: $header--zindex;
+  z-index: $north--zindex;
   display: flex;
-  height: $header--height;
-  padding-left: $aside--width;
+  height: $north--height;
+  padding-left: $west--width;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, .05);
   transition: padding-left .3s;
   &__hd {
     position: absolute;
     top: 0;
     left: 0;
-    width: $aside--width;
-    height: $header--height;
+    width: $west--width;
+    height: $north--height;
     background-color: $color--primary;
     transition: width .3s;
   }
@@ -22,7 +22,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $aside--width;
+    width: $west--width;
     height: 100%;
     padding: 5px;
     margin: 0;
@@ -54,9 +54,9 @@
   }
   &__menu.el-menu > .el-menu-item,
   &__menu.el-menu > .el-submenu > .el-submenu__title {
-    height: $header--height;
+    height: $north--height;
     padding: 0 15px;
-    line-height: $header--height;
+    line-height: $north--height;
   }
   &__menu.el-menu .el-menu-item,
   &__menu.el-menu .el-menu-item.is-active,
@@ -131,7 +131,7 @@
     height: 100%;
   }
   .ra-avatar {
-    width: $header--height - 12px;
+    width: $north--height - 12px;
     height: auto;
     margin-right: 5px;
     border-radius: 100%;
@@ -155,21 +155,21 @@
 }
 
 // 鲜艳
-.ra-header--colorful {
-  .ra-header {
+.ra-north--colorful {
+  .ra-north {
     box-shadow: none;
   }
-  .ra-header__bd,
-  .ra-header__menu.el-menu .el-menu,
-  .ra-header__menu.el-menu .el-menu-item,
-  .ra-header__menu.el-menu .el-submenu .el-submenu__title {
+  .ra-north__bd,
+  .ra-north__menu.el-menu .el-menu,
+  .ra-north__menu.el-menu .el-menu-item,
+  .ra-north__menu.el-menu .el-submenu .el-submenu__title {
     background-color: $color--primary;
   }
-  .ra-header__menu.el-menu .el-menu-item,
-  .ra-header__menu.el-menu .el-menu-item.is-active,
-  .ra-header__menu.el-menu .el-submenu .el-submenu__title,
-  .ra-header__menu.el-menu .el-submenu.is-active .el-submenu__title,
-  .ra-header__menu.el-menu .el-submenu:focus .el-submenu__title {
+  .ra-north__menu.el-menu .el-menu-item,
+  .ra-north__menu.el-menu .el-menu-item.is-active,
+  .ra-north__menu.el-menu .el-submenu .el-submenu__title,
+  .ra-north__menu.el-menu .el-submenu.is-active .el-submenu__title,
+  .ra-north__menu.el-menu .el-submenu:focus .el-submenu__title {
     color: $color--white;
     &:focus {
       background-color: transparent;
@@ -179,8 +179,8 @@
       background-color: mix($color--black, $color--primary, 15%);
     }
   }
-  .ra-header__menu.el-menu > .el-menu-item > .el-button,
-  .ra-header__menu.el-menu > .el-submenu > .el-submenu__title > .el-button {
+  .ra-north__menu.el-menu > .el-menu-item > .el-button,
+  .ra-north__menu.el-menu > .el-submenu > .el-submenu__title > .el-button {
     color: $color--white;
     border-color: $color--white;
     background-color: transparent;
@@ -204,8 +204,8 @@
 }
 
 // 固定
-.ra-header--fixed {
-  .ra-header {
+.ra-north--fixed {
+  .ra-north {
     position: fixed;
   }
 }

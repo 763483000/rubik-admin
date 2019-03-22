@@ -112,7 +112,7 @@
   }
   &.el-tabs > .el-tabs__header > .el-tabs__nav-wrap > .el-tabs__nav-next,
   &.el-tabs > .el-tabs__header > .el-tabs__nav-wrap > .el-tabs__nav-prev {
-    line-height: $main--tabs-header-height;
+    line-height: $center--tabs-header-height;
   }
   &.el-tabs > .el-tabs__header > .el-tabs__nav-wrap > .el-tabs__nav-scroll > .el-tabs__nav > .el-tabs__active-bar {
     display: none;

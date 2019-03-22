@@ -5,19 +5,19 @@ Vue.use(Router)
 
 // 页面路由
 export const pageRoutes = [
-  { path: '/404', component: () => import('@/views/pages/404'), name: '404', meta: { title: '404未找到' } },
-  { path: '/login', component: () => import('@/views/pages/login'), name: 'login', meta: { title: '登录' } }
+  { path: '/404', component: () => import('@/views/pages/404.vue'), name: '404', meta: { title: '404未找到' } },
+  { path: '/login', component: () => import('@/views/pages/login.vue'), name: 'login', meta: { title: '登录' } }
 ]
 
 // 模块路由
 export const moduleRoutes = {
   path: '/',
-  component: () => import('@/views/layout'),
+  component: () => import('@/views/layout/layout.vue'),
   name: 'layout',
   redirect: { name: 'home' },
   meta: { title: '布局' },
   children: [
-    { path: '/home', component: () => import('@/views/modules/home'), name: 'home', meta: { title: '首页', isTab: true } }
+    { path: '/home', component: () => import('@/views/modules/home.vue'), name: 'home', meta: { title: '首页', isTab: true } }
   ]
 }
 
