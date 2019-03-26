@@ -2,7 +2,7 @@
 
 <div align="center">
 
-Admin template based on Vue + Element.（基于Vue + Element的后台管理模板）
+Admin template based on Vue + Element.
 
 [![vue](https://img.shields.io/badge/vue-%5E2.5.17-red.svg)](https://github.com/vuejs/vue)
 [![element](https://img.shields.io/badge/element-%5E2.4.5-orange.svg)](https://github.com/ElemeFE/element)
@@ -13,20 +13,19 @@ Admin template based on Vue + Element.（基于Vue + Element的后台管理模�
 
 ## Introduction
 
-[rubik-admin](https://github.com/fangxinqu/rubik-admin) 是一套基于 [Vue](https://github.com/vuejs/vue) 和 [Element](https://github.com/ElemeFE/element) 的后台管理模版。它提供「ES5 无需编译」和「ES6+ 需编译」2种技术解决方向，主要为了协助各类开发人群提高页面的开发效率。其中：
+[rubik-admin](https://github.com/fangxinqu/rubik-admin) 是一套基于 [Vue](https://github.com/vuejs/vue) 和 [Element](https://github.com/ElemeFE/element) 的后台管理模版。它提供「ES5 无需编译」和「ES6+ 需编译」2种技术解决方向，主要为了协助各类开发人群提高页面的开发效率。
 
 * ES5 - 通过 [RequreJS](https://github.com/requirejs/requirejs) 实现模块化加载文件，直接运行于浏览器中。
-* ES6+ - 基于 [vue-cli](https://github.com/vuejs/vue-cli) 脚手架构建管理，更加愉快的体验ES6+新特性。
+* ES6+ - 基于 [vue-cli](https://github.com/vuejs/vue-cli) 脚手架构建管理，更愉悦的体验ES6+新特性。
 
 
 ## Links
 
-- GitHub - [https://github.com/fangxinqu/rubik-admin](https://github.com/fangxinqu/rubik-admin)
-- 在线演示 - 努力中...
-- 使用文档 - 努力中...
-- 计划安排 - [https://github.com/fangxinqu/rubik-admin/blob/master/PLANSCHEDULE.md](https://github.com/fangxinqu/rubik-admin/blob/master/PLANSCHEDULE.md)
-- 更新日志 - [https://github.com/fangxinqu/rubik-admin/blob/master/CHANGELOG.md](https://github.com/fangxinqu/rubik-admin/blob/master/CHANGELOG.md)
-- 常见问题 - 努力中...
+- [在线演示](https://fangxinqu.com/rubik-admin/)
+- [使用文档](https://github.com/fangxinqu/rubik-admin/wiki)
+- [计划安排](https://github.com/fangxinqu/rubik-admin/blob/master/PLANSCHEDULE.md)
+- [更新日志](https://github.com/fangxinqu/rubik-admin/blob/master/CHANGELOG.md)
+- [常见问题](https://github.com/fangxinqu/rubik-admin/wiki)
 
 ## Browsers support
 
