@@ -18,12 +18,12 @@
 
       <el-menu class="ra-north__menu ra-north__menu--right" mode="horizontal">
         <el-menu-item index="2">
-            <a href="https://www.renren.io/community" target="_blank">
-              <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
-                <use xlink:href="#icon-earth"></use>
-              </svg>
-            </a>
-          </el-menu-item>
+          <a href="https://www.renren.io/community" target="_blank">
+            <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
+              <use xlink:href="#icon-earth"></use>
+            </svg>
+          </a>
+        </el-menu-item>
         <el-menu-item index="3">
           <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
             <use xlink:href="#icon-sync"></use>

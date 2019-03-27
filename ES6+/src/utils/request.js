@@ -1,64 +1,62 @@
-import axios from 'axios'
-import Cookies from 'js-cookie'
-import router from '@/router'
-import qs from 'qs'
-import { clearLoginInfo } from '@/utils'
-import isPlainObject from 'lodash/isPlainObject'
+import axios from 'axios';
+import Cookies from 'js-cookie';
+import router from '@/router';
+import qs from 'qs';
+import { clearLoginInfo } from '@/utils';
+import isPlainObject from 'lodash/isPlainObject';
 
 const http = axios.create({
-  baseURL: window.APP_CONFIG['apiURL'],
+  baseURL: window.APP_CONFIG.apiURL,
   timeout: 1000 * 180,
-  withCredentials: true
-})
+  withCredentials: true,
+});
 
 /**
  * 请求拦截
  */
-http.interceptors.request.use(config => {
-  config.headers['Accept-Language'] = Cookies.get('language') || 'zh-CN'
-  config.headers['token'] = Cookies.get('token') || ''
+http.interceptors.request.use((config) => {
+  config.headers['Accept-Language'] = Cookies.get('language') || 'zh-CN';
+  config.headers.token = Cookies.get('token') || '';
   // 默认参数
-  var defaults = {}
+  const defaults = {};
   // 防止缓存，GET请求默认带_t参数
   if (config.method === 'get') {
     config.params = {
       ...config.params,
-      ...{ '_t': new Date().getTime() }
-    }
+      ...{ _t: new Date().getTime() },
+    };
   }
   if (isPlainObject(config.params)) {
     config.params = {
       ...defaults,
-      ...config.params
-    }
+      ...config.params,
+    };
   }
   if (isPlainObject(config.data)) {
     config.data = {
       ...defaults,
-      ...config.data
-    }
+      ...config.data,
+    };
     if (/^application\/x-www-form-urlencoded/.test(config.headers['content-type'])) {
-      config.data = qs.stringify(config.data)
+      config.data = qs.stringify(config.data);
     }
   }
-  return config
-}, error => {
-  return Promise.reject(error)
-})
+  return config;
+}, error => Promise.reject(error));
 
 /**
  * 响应拦截
  */
-http.interceptors.response.use(response => {
+http.interceptors.response.use((response) => {
   if (response.data.code === 401 || response.data.code === 10001) {
-    clearLoginInfo()
-    router.replace({ name: 'login' })
-    return Promise.reject(response.data.msg)
+    clearLoginInfo();
+    router.replace({ name: 'login' });
+    return Promise.reject(response.data.msg);
   }
-  return response
-}, error => {
-  console.error(error)
-  return Promise.reject(error)
-})
+  return response;
+}, (error) => {
+  console.error(error);
+  return Promise.reject(error);
+});
 
-export default http
+export default http;

@@ -13,7 +13,7 @@
           <svg class="icon-svg ra-west__menu-icon" aria-hidden="true"><use xlink:href="#icon-home"></use></svg>
           <span slot="title">首页</span>
         </el-menu-item>
-        
+
         <el-menu-item index="icon" @click="gotoPageHandle('@@path/pages/icon.html')">
           <svg class="icon-svg ra-west__menu-icon" aria-hidden="true"><use xlink:href="#icon-gift"></use></svg>
           <span slot="title">图标</span>

@@ -8,11 +8,20 @@
     "build:sit": "vue-cli-service build --mode production.sit",
     "build:uat": "vue-cli-service build --mode production.uat",
     "build:prod": "vue-cli-service build --mode production",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "et": "gulp et",
+    "et:list": "gulp et:list"
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "colors": "^1.3.3",
     "element-ui": "^2.6.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "js-cookie": "^2.2.0",
     "lodash": "^4.17.11",
     "qs": "^6.6.0",
