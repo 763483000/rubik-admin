@@ -6,15 +6,29 @@ const del    = require('del');
 const colors = require('colors');
 const child_process = require('child_process');
 
-let etBuild = (buildFilePath, outputFileName, outputFilePath, cb) => {
+const pkg  = require('./package.json')
+const banner = `/*!
+  * ${pkg.name}
+  * @version ${pkg.version}
+  * @link ${pkg.homepage}
+  * @license ${pkg.license}
+  * 
+  * Vue ${require('./node_modules/vue/package.json').version}
+  * Element-ui ${require('./node_modules/element-ui/package.json').version}
+  */`
+
+const etBuild = (buildFilePath, outputFileName, outputFilePath, cb) => {
   return gulp.src(buildFilePath)
   .pipe($.sass().on('error', $.sass.logError))
   .pipe($.autoprefixer({
-    browsers: require('./package.json').browserslist,
+    browsers: pkg.browserslist,
     cascade: false,
   }))
-  .pipe($.cleanCss())
+  .pipe($.header(banner))
   .pipe($.rename(outputFileName))
+  // .pipe(gulp.dest(outputFilePath))
+  .pipe($.cleanCss())
+  .pipe($.rename({ suffix: '.min' }))
   .pipe(gulp.dest(outputFilePath))
   .on('end', Object.prototype.toString.call(cb) === '[object Function]' ? cb : () => {});
 };
@@ -28,10 +42,10 @@ gulp.task('et:copyFonts', () => {
 });
 
 /**
- * 构建Element主题，根据theme-build.scss文件中$--color-primary变量值构建1套“默认”主题
+ * 构建Element主题，根据theme-build.scss文件中$--color-primary变量值构建1套“green绿色[默认]”主题
  */
 gulp.task('et', ['et:copyFonts'], () => {
-  return etBuild(['./src/theme-build.scss'], 'default.css', './public/element-theme');
+  return etBuild(['./src/theme-build.scss'], 'green.css', './public/element-theme');
 });
 
 /**
@@ -79,15 +93,20 @@ gulp.task('et:list', ['et:copyFonts'], () => {
   }
 });
 
-gulp.task('styles', () => {
-  return gulp.src([`${styleFileDirTemp}/aui.scss`])
+/**
+ * 构建Rubik-admin主题，根据theme文件夹下主题文件构建多套主题
+ */
+gulp.task('rat', () => {
+  return gulp.src(['./src/assets/styles/theme/*.scss'])
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.autoprefixer({
-      browsers: etOptions.browsers,
+      browsers: pkg.browserslist,
       cascade: false
     }))
+    .pipe($.header(banner))
+    // .pipe(gulp.dest('./public/rubik-admin-theme'))
     .pipe($.cleanCss())
-    .pipe($.rename('aui.css'))
-    .pipe(gulp.dest(`${themeFileDir}/${theme.name}`))
-})
+    .pipe($.rename({ suffix: '.min' }))
+    .pipe(gulp.dest('./public/rubik-admin-theme'));
+});
 

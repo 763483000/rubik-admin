@@ -4,7 +4,7 @@ import App from '@/App.vue';
 import router from '@/router';
 import store from '@/store';
 import '@/icons';
-import '@/../public/element-theme/green.css';
+import '@/../public/element-theme/green.min.css';
 import '@/assets/styles/app.scss';
 
 Vue.config.productionTip = false;

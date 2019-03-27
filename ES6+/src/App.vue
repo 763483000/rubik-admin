@@ -7,16 +7,6 @@
 </template>
 
 <script>
-import styles from '@/assets/styles/variables.scss';
-
 export default {
-  data() {
-    return {
-      styles: styles
-    }
-  },
-  created() {
-    console.log(this.styles, 1111);
-  },
 };
 </script>

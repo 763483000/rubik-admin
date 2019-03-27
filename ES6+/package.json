@@ -2,6 +2,8 @@
   "name": "rubik-admin",
   "version": "1.0.0-beta.1",
   "private": true,
+  "homepage": "https://github.com/fangxinqu/rubik-admin",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -10,7 +12,8 @@
     "build:prod": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint",
     "et": "gulp et",
-    "et:list": "gulp et:list"
+    "et:list": "gulp et:list",
+    "rat": "gulp rat"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -19,6 +22,7 @@
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "^3.10.0",
+    "gulp-header": "^2.0.7",
     "gulp-load-plugins": "^1.5.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
