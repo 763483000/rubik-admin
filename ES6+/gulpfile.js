@@ -27,7 +27,7 @@ const etBuild = (buildFilePath, outputFileName, outputFilePath, cb) => {
   .pipe($.header(banner))
   .pipe($.rename(outputFileName))
   // .pipe(gulp.dest(outputFilePath))
-  .pipe($.cleanCss())
+  .pipe($.cssmin())
   .pipe($.rename({ suffix: '.min' }))
   .pipe(gulp.dest(outputFilePath))
   .on('end', Object.prototype.toString.call(cb) === '[object Function]' ? cb : () => {});
@@ -105,7 +105,7 @@ gulp.task('rat', () => {
     }))
     .pipe($.header(banner))
     // .pipe(gulp.dest('./public/rubik-admin-theme'))
-    .pipe($.cleanCss())
+    .pipe($.cssmin())
     .pipe($.rename({ suffix: '.min' }))
     .pipe(gulp.dest('./public/rubik-admin-theme'));
 });
