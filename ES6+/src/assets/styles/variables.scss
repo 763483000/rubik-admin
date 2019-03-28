@@ -5,7 +5,7 @@
 $color--white: #fff;
 $color--black: #000;
 
-$color--primary        : $skin--green;
+$color--primary        : $skin--green !default;
 $color--primary-light-1: mix($color--white, $color--primary, 10%);
 $color--primary-light-2: mix($color--white, $color--primary, 20%);
 $color--primary-light-3: mix($color--white, $color--primary, 30%);

@@ -80,12 +80,12 @@
     left: $west--width;
   }
 }
-.ra-center-tabs__header--fixed.ra-aside--fold {
+.ra-center-tabs__header--fixed.ra-west--fold {
   .ra-center-tabs.el-tabs > .el-tabs__header {
     left: $west--width-fold;
   }
 }
-.ra-center-tabs__header--fixed.ra-aside--top {
+.ra-center-tabs__header--fixed.ra-west--top {
   .ra-center-tabs__tool {
     top: $north--height + $west--top-height;
   }

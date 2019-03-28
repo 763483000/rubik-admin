@@ -4,11 +4,11 @@ import Vuex from 'vuex';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  // 命名空间，默认开启
-  namespaced: true,
-  // 严格模式，默认关闭
-  strict: false,
+  namespaced: true, // 命名空间，默认开启
+  strict: false, // 严格模式，默认关闭
   state: {
+    westFlod: false, // 西, 折叠状态
+
     // 滚动条, 滚动高度
     scrollbarHeight: 0,
     // 容器, 居中
@@ -21,8 +21,7 @@ export default new Vuex.Store({
     asideSkin: 'dark',
     // 侧边, 固定状态
     asideFixed: false,
-    // 侧边, 折叠状态
-    asideFold: false,
+    
     // 侧边, 至头部状态
     asideTop: false,
     // 侧边, 菜单显示状态 (控制台“至头部”操作时, el-menu组件需根据mode属性重新渲染)

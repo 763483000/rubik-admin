@@ -104,7 +104,7 @@ gulp.task('ra:theme', () => {
       cascade: false
     }))
     .pipe($.header(banner))
-    // .pipe(gulp.dest('./public/rubik-admin-theme'))
+    // .pipe(gulp.dest('./public/ra-theme'))
     .pipe($.cssmin())
     .pipe($.rename({ suffix: '.min' }))
     .pipe(gulp.dest('./public/ra-theme'));

@@ -74,7 +74,7 @@
                 <span>最近使用的产品</span>
                 <a href="#" class="f-right fz-xs">
                   <span class="va-middle">操作日志</span>
-                  <svg class="icon-svg fz-base" aria-hidden="true"><use xlink:href="#icon-time-circle"></use></svg>
+                  <svg class="icon-svg fz-base" aria-hidden="true"><use xlink:href="#time-circle"></use></svg>
                 </a>
               </div>
               <div class="ra-panel__bd">
@@ -164,7 +164,7 @@
                     </el-row>
                     <a href="#" class="index-product__fold">
                       <span class="va-middle">收起更多产品</span>
-                      <svg class="icon-svg fz-base" aria-hidden="true"><use xlink:href="#icon-down"></use></svg>
+                      <svg class="icon-svg fz-base" aria-hidden="true"><use xlink:href="#down"></use></svg>
                     </a>
                   </el-tab-pane>
                   <el-tab-pane class="index-consume" label="我的消费" name="2">
@@ -216,14 +216,14 @@
                       <el-row :gutter="15">
                         <el-col :span="12">
                           <div class="index-ambassador__item">
-                            <svg class="index-ambassador__item-icon icon-svg" aria-hidden="true"><use xlink:href="#icon-gift-fill"></use></svg>
+                            <svg class="index-ambassador__item-icon icon-svg" aria-hidden="true"><use xlink:href="#gift-fill"></use></svg>
                             <h4 class="index-ambassador__item-title">专享优厚回报</h4>
                             <p class="index-ambassador__item-intro">不但提供推广返利，更有任务奖金，排名大奖，大使折扣，新产品内测机会等专属奖励。</p>
                           </div>
                         </el-col>
                         <el-col :span="12">
                           <div class="index-ambassador__item">
-                            <svg class="index-ambassador__item-icon icon-svg" aria-hidden="true"><use xlink:href="#icon-trophy-fill"></use></svg>
+                            <svg class="index-ambassador__item-icon icon-svg" aria-hidden="true"><use xlink:href="#trophy-fill"></use></svg>
                             <h4 class="index-ambassador__item-title">与阿里云共同成长</h4>
                             <p class="index-ambassador__item-intro">阿里云将长期扶持云大使尤其是其中优秀者的长期发展，提供相应培训，能力认证等。</p>
                           </div>
@@ -299,7 +299,7 @@
               <div class="ra-panel__bd">
                 <div class="index-assistant__item">
                   <div class="index-assistant__item-hd">
-                    <svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-robot"></use></svg>
+                    <svg class="icon-svg" aria-hidden="true"><use xlink:href="#robot"></use></svg>
                   </div>
                   <div class="index-assistant__item-bd">
                     <h4 class="index-assistant__item-title">双11巅峰钜惠</h4>
@@ -309,7 +309,7 @@
                 </div>
                 <div class="index-assistant__item">
                   <div class="index-assistant__item-hd">
-                    <svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-instagram"></use></svg>
+                    <svg class="icon-svg" aria-hidden="true"><use xlink:href="#instagram"></use></svg>
                   </div>
                   <div class="index-assistant__item-bd">
                     <h4 class="index-assistant__item-title">2018广东云栖大会</h4>
@@ -319,7 +319,7 @@
                 </div>
                 <div class="index-assistant__item">
                   <div class="index-assistant__item-hd">
-                    <svg class="icon-svg" aria-hidden="true"><use xlink:href="#icon-apartment"></use></svg>
+                    <svg class="icon-svg" aria-hidden="true"><use xlink:href="#apartment"></use></svg>
                   </div>
                   <div class="index-assistant__item-bd">
                     <h4 class="index-assistant__item-title">推荐好友送云服务器</h4>
@@ -348,7 +348,7 @@
           <!-- 定制资讯 -->
           <div class="index-section">
             <el-button class="ra-button--dashed index-btn__custom">
-              <svg class="icon-svg fz-base" aria-hidden="true"><use xlink:href="#icon-time-circle"></use></svg>
+              <svg class="icon-svg fz-base" aria-hidden="true"><use xlink:href="#time-circle"></use></svg>
               <span class="va-middle">定制资讯</span>
             </el-button>
           </div>
@@ -374,5 +374,12 @@
 
 <script>
 export default {
+  data() {
+    return {
+      menuList: [],
+      indexNoticeTabsActive: '1',
+      indexPersonalTabsActive: '1'
+    };
+  },
 };
 </script>

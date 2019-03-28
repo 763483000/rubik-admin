@@ -9,9 +9,9 @@
         <el-menu-item
           v-if="!$store.state.asideTop"
           index="1"
-          @click="$store.state.asideFold = !$store.state.asideFold">
+          @click="$store.state.westFlod = !$store.state.westFlod">
           <svg class="icon-svg ra-north__icon-menu ra-north__icon-menu--rz180" aria-hidden="true">
-            <use xlink:href="#icon-outdent"></use>
+            <use xlink:href="#outdent"></use>
           </svg>
         </el-menu-item>
       </el-menu>
@@ -20,23 +20,23 @@
         <el-menu-item index="2">
           <a href="https://www.renren.io/community" target="_blank">
             <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
-              <use xlink:href="#icon-earth"></use>
+              <use xlink:href="#earth"></use>
             </svg>
           </a>
         </el-menu-item>
         <el-menu-item index="3">
           <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
-            <use xlink:href="#icon-sync"></use>
+            <use xlink:href="#sync"></use>
           </svg>
         </el-menu-item>
         <el-menu-item index="4">
           <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
-            <use xlink:href="#icon-fullscreen"></use>
+            <use xlink:href="#fullscreen"></use>
           </svg>
         </el-menu-item>
         <el-menu-item index="1" @click="searchVisible = !searchVisible" class="ra-search__toggle">
           <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
-            <use xlink:href="#icon-search"></use>
+            <use xlink:href="#search"></use>
           </svg>
         </el-menu-item>
         <el-submenu index="2" :popper-append-to-body="false" class="not-arrow t-center">
@@ -57,7 +57,7 @@
         </el-submenu>
         <el-menu-item index="1" @click="controlOpen = !controlOpen">
           <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
-            <use xlink:href="#icon-setting"></use>
+            <use xlink:href="#setting"></use>
           </svg>
         </el-menu-item>
       </el-menu>
@@ -66,7 +66,7 @@
         <div class="ra-search__inner">
           <el-input class="ra-search__input" v-model="search" placeholder="搜索关键字" clearable>
             <svg slot="prepend" class="icon-svg" aria-hidden="true">
-              <use xlink:href="#icon-search"></use>
+              <use xlink:href="#search"></use>
             </svg>
           </el-input>
         </div>
@@ -79,6 +79,8 @@
 export default {
   data() {
     return {
+      searchVisible: false,
+      search: ''
     };
   },
 };

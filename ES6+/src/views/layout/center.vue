@@ -21,7 +21,7 @@
     </el-dropdown>
     <el-tabs v-show="$store.state.mainType === 'tabs'" class="ra-center-tabs ra-tabs" v-model="$store.state.mainTabsActive">
       <el-tab-pane label="home" name="home" :closable="false" class="ra-center-tabs__pane--full">
-        <svg slot="label" class="ra-content--tabs-icon-nav icon-svg" aria-hidden="true"><use xlink:href="#icon-home"></use></svg>
+        <svg slot="label" class="ra-content--tabs-icon-nav icon-svg" aria-hidden="true"><use xlink:href="#home"></use></svg>
         <home></home>
       </el-tab-pane>
       <el-tab-pane label="标签页2" name="2" closable>标签页2</el-tab-pane>

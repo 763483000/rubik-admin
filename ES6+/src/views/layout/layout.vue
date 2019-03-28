@@ -11,11 +11,11 @@
         'ra-layout--center': $store.state.wrapperCenter,
         'ra-north--fixed': $store.state.headerFixed,
         'ra-west--fixed': $store.state.asideFixed,
-        'ra-west--fold': $store.state.asideFold,
+        'ra-west--fold': $store.state.westFlod,
         'ra-west--top': $store.state.asideTop,
         'ra-east--fixed': $store.state.controlFixed,
         'ra-east--open': $store.state.controlOpen,
-        'ra-main-tabs__header--fixed': $store.state.mainTabsHeaderFixed
+        'ra-center-tabs__header--fixed': $store.state.mainTabsHeaderFixed
       }
     ]">
     <template v-if="!loading">
