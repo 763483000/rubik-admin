@@ -96,7 +96,7 @@ gulp.task('et:list', ['et:copyFonts'], () => {
 /**
  * 构建Rubik-admin主题，根据theme文件夹下主题文件构建多套主题
  */
-gulp.task('rat', () => {
+gulp.task('ra:theme', () => {
   return gulp.src(['./src/assets/styles/theme/*.scss'])
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.autoprefixer({
@@ -107,6 +107,6 @@ gulp.task('rat', () => {
     // .pipe(gulp.dest('./public/rubik-admin-theme'))
     .pipe($.cssmin())
     .pipe($.rename({ suffix: '.min' }))
-    .pipe(gulp.dest('./public/rubik-admin-theme'));
+    .pipe(gulp.dest('./public/ra-theme'));
 });
 
