@@ -1,0 +1,97 @@
+.ra-east {
+  position: absolute;
+  top: $north--height;
+  right: -$east--width;
+  bottom: 0;
+  z-index: $east--zindex;
+  width: $east--width;
+  background-color: $color--white;
+  transition: right .3s;
+  &__toggle {
+    position: absolute;
+    top: 80px;
+    left: -40px;
+    width: 40px;
+    padding: 12px 8px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+    border-radius: $border--radius-base 0 0 $border--radius-base;
+    color: $color--white;
+    background-color: $color--primary;
+    cursor: pointer;
+  }
+  &__inner {
+    position: relative;
+    z-index: 1;
+    width: $east--width + 20px;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  &__bd {
+    width: $east--width;
+    padding: 5px 20px 20px;
+  }
+  .ra-tabs.el-tabs {
+    margin: -5px -20px -20px;
+  }
+  .ra-tabs.el-tabs .el-tabs__content {
+    padding: 0 15px 15px;
+  }
+  &__setting {
+    margin: 0;
+  }
+  &__setting > dt {
+    margin-top: 15px;
+    font-size: $font--size-xl;
+    font-weight: 900;
+  }
+  &__setting > dd {
+    margin-top: 10px;
+    margin-left: 1em;
+  }
+  &__setting + &__setting {
+    margin-top: 15px;
+    border-top: 1px solid $border--color-lighter;
+  }
+}
+
+// 固定
+.ra-east--fixed {
+  .ra-east {
+    position: fixed;
+  }
+}
+.ra-east--fixed.ra-east--open {
+  .ra-center {
+    margin-right: 0;
+  }
+  .ra-south {
+    margin-right: 0;
+  }
+}
+.ra-east--fixed.ra-east--open.ra-west--top {
+  .ra-west {
+    right: 0;
+  }
+}
+
+// 打开
+.ra-east--open {
+  .ra-east {
+    right: 0;
+    box-shadow: -1px 0 0 0 rgba(0, 0, 0, .05);
+  }
+  .ra-center {
+    margin-right: $east--width;
+  }
+  .ra-south {
+    margin-right: $east--width;
+  }
+}
+.ra-east--open.ra-west--top {
+  .ra-west {
+    right: $east--width;
+  }
+}

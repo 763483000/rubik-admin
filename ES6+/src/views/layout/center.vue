@@ -3,7 +3,7 @@
     <!-- standard 标准 -->
     <div v-show="$store.state.mainType === 'standard'" class="ra-center__hd">
       <el-breadcrumb separator="/">
-        <el-breadcrumb-item>renren-ra</el-breadcrumb-item>
+        <el-breadcrumb-item>rubik-admin</el-breadcrumb-item>
         <el-breadcrumb-item>首页</el-breadcrumb-item>
       </el-breadcrumb>
     </div>

@@ -1,0 +1,88 @@
+@import "../../theme-config.scss";
+
+/* Colors
+-------------------------- */
+$color--white: #fff;
+$color--black: #000;
+
+$color--primary        : $skin--green !default;
+$color--primary-light-1: mix($color--white, $color--primary, 10%);
+$color--primary-light-2: mix($color--white, $color--primary, 20%);
+$color--primary-light-3: mix($color--white, $color--primary, 30%);
+$color--primary-light-4: mix($color--white, $color--primary, 40%);
+$color--primary-light-5: mix($color--white, $color--primary, 50%);
+$color--primary-light-6: mix($color--white, $color--primary, 60%);
+$color--primary-light-7: mix($color--white, $color--primary, 70%);
+$color--primary-light-8: mix($color--white, $color--primary, 80%);
+$color--primary-light-9: mix($color--white, $color--primary, 90%);
+
+$color--text-primary    : #303133;
+$color--text-regular    : #606266;
+$color--text-secondary  : #909399;
+$color--text-placeholder: #c0c4cc;
+
+
+/* Link
+-------------------------- */
+$link--color      : $color--primary-light-2;
+$link--hover-color: $color--primary;
+
+
+/* Border
+-------------------------- */
+$border--color-base       : #dcdfe6;
+$border--color-light      : #e4e7ed;
+$border--color-lighter    : #ebeef5;
+$border--color-extra-light: #f2f6fc;
+$border--hover-color: $color--text-placeholder;
+$border--radius-sm  : 2px;
+$border--radius-base: 4px;
+
+
+/* Background
+-------------------------- */
+$background--color-base: #f5f7fa;
+
+
+/* Font
+------------------------------ */
+$font--family-base: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+$font--size-xs  : 12px;
+$font--size-sm  : 13px;
+$font--size-base: 14px;
+$font--size-lg  : 16px;
+$font--size-xl  : 18px;
+$font--size-xxl : 22px;
+$font--weight-base: 500;
+$font--line-height-base: 1.15;
+
+
+/* Layout
+------------------------------ */
+$layout--min-width: 1180px;
+
+$north--zindex: 1040;
+$north--height: 50px;
+
+$west--zindex: 1030;
+$west--width: 230px;
+$west--width-fold: 60px;
+$west--menu-item-height: 40px;
+$west--text-color-dark: #8a979e;
+$west--background-color-dark: #263238;
+$west--top-height: 42px;
+
+$east--zindex: 1020;
+$east--width: 210px;
+
+$center--zindex: 1000;
+$center--background-color: #f1f4f5;
+$center--tabs-tool-width: 42px;
+$center--tabs-header-height: 38px;
+$center--tabs-content-padding-x: 15px;
+$center--tabs-content-padding-y: 15px;
+$center--tabs-panel-padding-x: 15px;
+$center--tabs-panel-padding-y: 15px;
+
+$south--zindex: 1010;
+$south--height: 56px;

@@ -10,7 +10,7 @@
     window.APP_CONFIG = {};
     window.APP_CONFIG.version = '<%= process.env.VUE_APP_VERSION %>';
     window.APP_CONFIG.nodeEnv = '<%= process.env.VUE_APP_NODE_ENV %>';
-    window.APP_CONFIG.baseURL = '<%= BASE_URL %>';
+    window.APP_CONFIG.baseURL = '';
   </script>
 
   <!-- 编译环境，映射对应环境下的HTTP请求变量 -->
@@ -18,11 +18,11 @@
     <% if (process.env.VUE_APP_NODE_ENV === 'dev') { %>
       window.APP_CONFIG.baseURL = 'http://localhost:8080/dev'; // 开发环境
     <% } %>
-    <% if (process.env.VUE_APP_NODE_ENV === 'prod:sit') { %>
-      window.APP_CONFIG.baseURL = ''; // 集成测试环境
+    <% if (process.env.VUE_APP_NODE_ENV === 'sit') { %>
+      window.APP_CONFIG.baseURL = ''; // 系统内部集成测试环境
     <% } %>
-    <% if (process.env.VUE_APP_NODE_ENV === 'prod:uat') { %>
-      window.APP_CONFIG.baseURL = ''; // 验收测试环境
+    <% if (process.env.VUE_APP_NODE_ENV === 'uat') { %>
+      window.APP_CONFIG.baseURL = ''; // 用户验收测试环境
     <% } %>
     <% if (process.env.VUE_APP_NODE_ENV === 'prod') { %>
       window.APP_CONFIG.baseURL = 'http://localhost:8080/prod'; // 生产环境

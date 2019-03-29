@@ -1,0 +1,25 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font--family-base;
+  font-size: $font--size-base;
+  line-height: $font--line-height-base;
+  color: $color--text-primary;
+  background-color: $color--white;
+}
+
+a {
+  color: $link--color;
+  text-decoration: none;
+  &:hover {
+    color: $link--hover-color;
+  }
+}
+
+[v-cloak] {
+  display: none;
+}

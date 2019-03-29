@@ -1,14 +1,13 @@
 {
   "name": "rubik-admin",
   "version": "1.0.0-beta.1",
-  "private": true,
   "homepage": "https://github.com/fangxinqu/rubik-admin",
   "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "build:sit": "vue-cli-service build --mode production.sit",
-    "build:uat": "vue-cli-service build --mode production.uat",
+    "build:sit": "vue-cli-service build --mode integration",
+    "build:uat": "vue-cli-service build --mode acceptance",
     "build:prod": "vue-cli-service build --mode production",
     "lint": "vue-cli-service lint",
     "et": "gulp et",

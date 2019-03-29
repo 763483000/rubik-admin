@@ -18,7 +18,7 @@
 
       <el-menu class="ra-north__menu ra-north__menu--right" mode="horizontal">
         <el-menu-item index="2">
-          <a href="https://www.renren.io/community" target="_blank">
+          <a href="https://fangxinqu.com/rubik-admin/" target="_blank">
             <svg class="icon-svg ra-north__icon-menu" aria-hidden="true">
               <use xlink:href="#earth"></use>
             </svg>

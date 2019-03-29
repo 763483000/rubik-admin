@@ -247,9 +247,9 @@
                 <el-tabs class="ra-tabs ra-tabs--flex" v-model="indexNoticeTabsActive">
                   <el-tab-pane label="全部公告" name="1">
                     <ul class="index-notice__list">
-                      <li><a href="https://www.renren.io/detail/10832" target="_blank">【升级】renren-cloud 1.1 发布：功能增强</a></li>
-                      <li><a href="https://www.renren.io/detail/10781" target="_blank">【升级】renren-security2.0 专业版发布：全新架构升级</a></li>
-                      <li><a href="https://www.renren.io/detail/10313" target="_blank">【协议】renren-security【企业版】授权协议</a></li>
+                      <li><a href="https://fangxinqu.com/rubik-admin/" target="_blank">【升级】rubik-admin</a></li>
+                      <li><a href="https://fangxinqu.com/rubik-admin/" target="_blank">【升级】rubik-admin</a></li>
+                      <li><a href="https://fangxinqu.com/rubik-admin/" target="_blank">【协议】rubik-admin</a></li>
                     </ul>
                     <p class="index-notice__more"><a href="#">更多</a></p>
                   </el-tab-pane>
